@@ -1,0 +1,4 @@
+
+# Ignone any environment files
+*.env
+

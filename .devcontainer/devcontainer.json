@@ -1,0 +1,47 @@
+{
+    // Name of the dev container
+    "name": "C/C++ VCPKG Cmake container",
+
+    // Specify the name of the service the dev container will use
+    "service": "dev",
+
+    // Specify the name of the user to use in the container
+    "remoteUser": "dev-user",
+
+    // Specify the workspace folder where the code will be located
+    "workspaceFolder": "/app",
+
+    // Docker compose file to use
+    "dockerComposeFile": [
+        "./docker/docker-compose.local.yml"
+    ],
+
+    // Specify the VSCODE customizations
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // C/C++ extension for language support
+                "ms-vscode.cpptools",
+                // CMake Tools extension for CMake support
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    },
+
+    // Container mounts
+    "mounts": [
+        // Links the host's SSH keys to the container
+        // (Allows the container to access private repositories)
+        {
+            "source": "~/.ssh",
+            "target": "/home/dev-user/.ssh",
+            "type": "bind"
+        }
+    ],
+
+    // Enable the init process to run and handle signals
+    "init": true,
+
+    // Override command for the supporting tools
+    "overrideCommand": false
+}
