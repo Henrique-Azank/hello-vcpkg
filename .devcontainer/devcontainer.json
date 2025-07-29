@@ -23,7 +23,9 @@
                 // C/C++ extension for language support
                 "ms-vscode.cpptools",
                 // CMake Tools extension for CMake support
-                "ms-vscode.cmake-tools"
+                "ms-vscode.cmake-tools",
+                // C++ Themes for VSCODE
+                "ms-vscode.cpptools-themes"
             ]
         }
     },

@@ -2,3 +2,8 @@
 # Ignone any environment files
 *.env
 
+# Ignore the build artifacts
+/build
+
+# Ignore the vcpkg installed directory
+/vcpkg_installed
