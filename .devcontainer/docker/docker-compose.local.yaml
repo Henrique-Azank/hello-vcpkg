@@ -1,0 +1,15 @@
+
+# Specify the version of Docker Compose
+version: '3.8'
+
+# Docker compose services
+services:
+
+  # Main container for development
+  dev:
+    build:
+      context: .
+      dockerfile: dockerfile.dev 
+    container_name: dev
+    volumes:
+      - ../../.:/app

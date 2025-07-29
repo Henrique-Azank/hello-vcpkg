@@ -1,0 +1,29 @@
+# Official Docker Image for C++ development using 
+# vcpkg package manager for dependencies.
+FROM mcr.microsoft.com/devcontainers/cpp
+
+# Install basic development tools 
+# (All of these are already included in the base image)
+RUN apt-get update && apt-get install -y \
+#     git \
+#     cmake \
+#     curl \
+#     zip \
+#     unzip \
+#     tar \
+#     pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Optional: Install commonly used packages to speed up first build
+# RUN vcpkg install \
+#     fmt \
+#     catch2 \
+#     spdlog \
+#     range-v3
+
+# Set the default shell to bash (better for development)
+SHELL ["/bin/bash", "-c"]
+
+# Keep the container running
+CMD ["sleep", "infinity"]

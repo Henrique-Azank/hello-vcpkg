@@ -6,14 +6,14 @@
     "service": "dev",
 
     // Specify the name of the user to use in the container
-    "remoteUser": "dev-user",
+    "remoteUser": "vscode",
 
     // Specify the workspace folder where the code will be located
     "workspaceFolder": "/app",
 
     // Docker compose file to use
-    "dockerComposeFile": [
-        "./docker/docker-compose.local.yml"
+    "dockerComposeFile": [ 
+        "./docker/docker-compose.local.yaml"
     ],
 
     // Specify the VSCODE customizations
